@@ -2,6 +2,8 @@ TodoContext context = new TodoContext();
 //interface avec la bdd => contient plein de méthode pour gérer la bdd 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TodoContext>();
+
 
 // Add services to the container.
 builder.Services.AddDbContext<TodoContext>();
@@ -10,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-SeedData.Init();
+//SeedData.Init();
 
 var app = builder.Build();
 

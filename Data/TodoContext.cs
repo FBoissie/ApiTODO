@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+//cette classe interprete le code et la bdd 
+//
 
 public class TodoContext : DbContext
 {
